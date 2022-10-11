@@ -16,13 +16,13 @@ Converts Markdown to PDF
 		return
 	}
 	defer pdf.Close()
-	
+
 	pageNumExtension := func(pdf *gofpdf.Fpdf) {
         pdf.SetFooterFunc(func() {
             left, _, right, bottom := pdf.GetMargins()
             width, height := pdf.GetPageSize()
             fontSize := 12.0
-			
+
             pNum := fmt.Sprint(pdf.PageNo())
             pdf.SetXY(width-left/2-pdf.GetStringWidth(pNum), height-bottom/2)
             pdf.SetFontSize(fontSize)

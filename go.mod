@@ -1,4 +1,4 @@
-module github.com/raykov/mdtopdf
+module github.com/Acke0/mdtopdf
 
 go 1.18
 
